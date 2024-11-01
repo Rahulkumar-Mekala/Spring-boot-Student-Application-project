@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body{
+	text-align: center;
+}
+table {
+	border: 3px, black,solid;
+	border-collapse:collapse;
+	
+	font-size: 20px; 
+	
+}
+ th,tr
+{
+background: aqua;
+
+padding: 2px;
+border: 3px, black,solid;
+}
+ 
+
+tr,td {
+	border: 3px, black,solid;
+	background: white;
+	border: 2px,inset,black;
+}
+#updatebutton{
+	text-align: center;
+	text-decoration: none;
+	background: blue;
+	padding: 10px;
+	border-radius:10%;
+	color: white; 
+}
+#updatebutton:hover{
+
+	background: white;
+	
+	color: blue; 
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View All Students</title>
+    <link th:href="@{/css/useralldetails.css}" rel="stylesheet">
+</head>
+<body>
+																											
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Father's Name</th>
+            <th>Mother's Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Address</th>
+            <th>Blood Group</th>
+            <th>Department</th>
+            <th>Course</th>
+            <th>Update StudentData</th>
+             <th>Delete StudentData</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${user}">
+            <td th:text="${user.studentId}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.fatherName}"></td>
+            <td th:text="${user.motherName}"></td>
+            <td th:text="${user.phoneNumber}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.gender}"></td>
+            <td th:text="${user.dateOfBirth}"></td>
+            <td th:text="${user.address}"></td>
+              <td th:text="${user.bloodGroup}"></td>
+            <td th:text="${user.department}"></td>
+            <td th:text="${user.course}"></td>
+         <td> <a id="updatebutton" href="/registerform/update" >Update</a></td>
+          <td> <a id="updatebutton" href="/Adminregisterform/delete" >Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<a id="updatebutton" href="/Adminlogout">ADMIN Logout</a>
+
+
+</body>
+</html>

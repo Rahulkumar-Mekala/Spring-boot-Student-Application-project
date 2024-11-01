@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete User</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Delete User</h2>
+    <div th:if="${message != null}">
+        <p class="error-message" th:text="${message}"></p>
+    </div>
+    
+    <form th:action="@{/registerform/delete}" th:object="${userdelete}" method="post">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" th:field="*{email}" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="*******" th:field="*{password}" required>
+        </div>
+        <button type="submit">Delete</button><br><br>
+    </form>
+<button id="button"><a id="button" href="/logout">Logout </a></button>
+</div>
+
+ 
+</body>
+</html>

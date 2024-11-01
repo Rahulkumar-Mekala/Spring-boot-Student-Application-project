@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+      <link th:href="@{/css/update.css}" rel="stylesheet">
+</head>
+<body>
+ <div th:if="${error != null}">
+        <p class="error-message" th:text="${error}"></p>
+    </div>
+   <h2> Update The Student Datails : </h2>
+ <form th:action="@{/registerfrom/userupdatedetails}" method="post" th:object="${userupdatestudent}">
+
+       
+
+
+        <label>Student Name:</label>
+       <input th:field="*{name}" type="text" name="name" placeholder="Enter the Student Name" required><br><br>
+
+  
+        <label>Father's Name:</label>
+        <input th:field="*{fatherName}" type="text" name="fatherName" placeholder="Enter the Father's Name" required><br><br>
+        
+        <label>Mother's Name:</label>
+        <input th:field="*{motherName}" type="text" name="motherName" placeholder="Enter the Mother's Name" required><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input th:field="*{phoneNumber}" type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" required><br><br>
+        
+        <label>Email:</label>
+        <input th:field="*{email}" type="email" name="email" placeholder="sample@exam.com" required><br><br>
+            <label>Password:</label>
+        <input th:field="*{password}" type="password" name="password" placeholder="*******" required><br><br>
+    
+       
+        <label>Gender:</label><br>
+        <input th:field="*{gender}" type="radio" name="gender" value="male" required>
+        <label>Male</label>
+        <input th:field="*{gender}" type="radio" name="gender" value="female">
+        <label>Female</label>
+        <input th:field="*{gender}" type="radio" name="gender" value="other">
+        <label>Other</label><br><br>
+        
+        <label>Date of Birth:</label>
+        <input th:field="*{dateOfBirth}" type="date" name="dateOfBirth" required><br><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea th:field="*{address}" id="address" name="address" rows="4" cols="50" maxlength="200" placeholder="Enter your address here" required></textarea><br><br>
+        
+        <label>Blood Group:</label>
+        <select th:field="*{bloodGroup}" name="bloodGroup">
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select><br><br>
+        
+        <label>Department:</label><br>
+        <input th:field="*{department}" type="radio" name="department" value="CSE">
+        <label>CSE</label>
+        <input th:field="*{department}" type="radio" name="department" value="EEE">
+        <label>EEE</label>
+        <input th:field="*{department}" type="radio" name="department" value="BBA">
+        <label>BBA</label><br><br>
+        
+        <label>Course:</label><br>
+       <input type="checkbox" th:field="*{course}" value="C" />
+<label>C</label>
+<input type="checkbox" th:field="*{course}" value="C++" />
+<label>C++</label>
+<input type="checkbox" th:field="*{course}" value="Java" />
+<label>Java</label>
+<input type="checkbox" th:field="*{course}" value="AI" />
+<label>AI</label>
+<input type="checkbox" th:field="*{course}" value="Machine Learning" />
+<label>Machine Learning</label>
+<input type="checkbox" th:field="*{course}" value="Robotics" />
+<label>Robotics</label><br><br>
+        
+        <input id ="button" type="submit" value="updateStudentDetails">
+        <br><br>
+   <span> check the Your Details : <button id="button"><a id="button" th:href="@{/login}">Login</a> </button><br><br></span>
+   <button id="button"> <a id="button" href="/logout">Logout </a></button>
+     
+   </form>
+</body>
+</html>

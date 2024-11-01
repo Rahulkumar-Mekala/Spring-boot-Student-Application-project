@@ -1,0 +1,47 @@
+	@charset "UTF-8";
+	body {
+		text-align: left;
+		background: aqua;
+		
+	}
+	form {
+		
+		color:  black;
+		font-family: inherit;
+		
+	}
+	h2{
+		border: 1px dotted black;
+		padding: 30px;
+		margin: 20px;
+		
+		text-align:  center;
+		
+	}
+	.message{
+		background  :aqua;
+		color :red;
+		padding: 30px;
+		margin: 20px;
+		text-align:  center;
+	}
+	
+	#button{
+		background:  blue;
+		color: white;
+		font-family: inherit;
+	   text-align: center;
+	   text-decoration: none;
+	   border-radius:10px; 
+	   font-style: italic;
+	   font-size: larger;
+	  
+		
+	}
+	#button:hover{
+		background:black;
+		color: aqua;
+	
+		
+	}
+	
